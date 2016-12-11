@@ -18,9 +18,9 @@ gulp.task('browserify', function() {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     // #1
-    .pipe(sourcemaps.write('./', { includeContent: false, sourceRoot: './' }))
+    //.pipe(sourcemaps.write('./', { includeContent: false, sourceRoot: './' }))
     // #2
-    // .pipe(sourcemaps.write('./', { includeContent: false }))
+    .pipe(sourcemaps.write('./', { includeContent: false }))
     .pipe(gulp.dest(dest));
 });
 
